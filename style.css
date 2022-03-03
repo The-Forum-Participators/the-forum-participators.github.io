@@ -42,3 +42,20 @@ li a {
 li.hover {
   background-color: #111;
 }
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: orange;
+}
+
+a:active {
+  color: blue;
+}
