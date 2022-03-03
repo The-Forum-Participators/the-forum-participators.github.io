@@ -39,6 +39,6 @@ li a {
     margin-right: auto;
     }
 
-li a:hover:not(.active) {
+li.hover {
   background-color: #111;
 }
