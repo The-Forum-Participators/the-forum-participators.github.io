@@ -6,15 +6,15 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  position: fixed;
   overflow: hidden;
   background-color: #D4A023;
-  position: fixed;
   top: 0;
   width: 100%;
 }
 
 nav li {
-  float: left;
+  float: right;
 }
 
 nav li a {
