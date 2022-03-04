@@ -32,14 +32,7 @@ body {
   text-align: center;
 }
 
-.dark-mode {
-  padding: 25px;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-
-    .bio {
+.bio {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
