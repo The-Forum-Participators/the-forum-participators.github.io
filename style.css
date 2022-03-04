@@ -8,12 +8,10 @@ nav {
   margin: 0;
   display: flex;
   background-color: #D4A023;
-  vertical-align: middle;
   align-items: center;
 }
 
 nav .name {
-  vertical-align: middle;
   font-weight: bold;
 }
 
