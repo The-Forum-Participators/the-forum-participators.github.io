@@ -25,12 +25,18 @@ li a {
   background-color: #888800;
 }
  
-    body {
-    padding-top: 50px;
-    text-align: center;
-    background-color: #ffffff;
-    font-color: #000000;
-    font-family: 'Oxygen', sans-serif;
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.dark-mode {
+  padding: 25px;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 
     .bio {
