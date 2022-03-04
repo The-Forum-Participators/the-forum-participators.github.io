@@ -86,8 +86,8 @@ a:active {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 25%;
   background-color: #D4A023;
   color: black;
-  text-align: center;
+  text-align: left;
 }
