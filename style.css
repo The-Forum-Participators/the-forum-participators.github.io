@@ -37,7 +37,7 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a:hover {
+nav a:hover {
   color: gray;
 }
 
