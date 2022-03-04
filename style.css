@@ -25,6 +25,10 @@ nav li a {
   text-decoration: none;
 }
 
+nav li a:hover {
+  color: gray;
+}
+
 .active {
   background-color: #888800;
 }
