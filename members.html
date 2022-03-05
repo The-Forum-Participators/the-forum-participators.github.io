@@ -7,14 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="/Assets/favicon.png">
-  <script src="/members.js"></script>
+  <script defer src="/members.js"></script>
   <style>
     /* Sorry for using inline styles.. just didn't want to make ANOTHER file :P */
     .member {
       background-color: #ffa500;
-      border-radius: 10px;
+      padding: 5px;
       margin: 5px;
-      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .member .name {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .member a:hover {
+      color: gray;
+    }
+
+    .member .avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
     }
   </style>
 </head>
@@ -29,8 +44,13 @@
     </ul>
   </nav>
   <h1>Members</h1>
-  <div id="members">
-    
+  <h2>Managers</h2>
+  <div id="managers">
+
+  </div>
+  <h2>Curators</h2>
+  <div id="curators">
+
   </div>
 </body>
 
