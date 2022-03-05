@@ -111,3 +111,39 @@ ul {
 a {
   font-weight: 500;
 }
+
+.privacyContent {
+	color: var(--textPrimary);
+	font-size: 20px;
+	width: 100%;
+	margin-top: 0px;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.privacyWarning {
+	font-family: Arial, sans-serif;
+	position: fixed;
+	width: 100%;
+	padding: 10px;
+	bottom: 0px;
+	background-color: #fff959;
+	text-align: center;
+}
+
+.privacyWarning:empty {
+	display: none;
+}
+
+.privacyButton {
+	border: 3px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	width: 100px;
+}
+
+.privacyButton:hover {
+	background-color: (lightgrey);
+	color: black;
+}
