@@ -41,10 +41,6 @@ nav a:hover {
   color: gray;
 }
 
-.footer a:hover {
-  color: gray;
-}
-
 .active {
   background-color: #888800;
 }
@@ -104,16 +100,6 @@ a:active {
 
 #upBtn:hover {
   background-color: #9d771c;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 15%;
-  background-color: #d4a023;
-  color: black;
-  text-align: center;
 }
 
 ul {
