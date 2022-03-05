@@ -41,6 +41,10 @@ nav a:hover {
   color: gray;
 }
 
+.footer a:hover {
+  color: gray;
+}
+
 .active {
   background-color: #888800;
 }
