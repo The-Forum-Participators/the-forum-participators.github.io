@@ -2,6 +2,18 @@
 
 const fetch = require("cross-fetch");
 const fs = require("fs");
+
+function trimUserData(data) {
+  return {
+    username: data.username,
+    profile: {
+      images: {
+        "90x90": data.profile.images["90x90"],
+      },
+    },
+  };
+}
+
 (async() => {
   let managers = [];
   let curators = [];
@@ -11,8 +23,8 @@ const fs = require("fs");
   curators = await curatorReq.json();
 
   const data = JSON.stringify({
-    managers: managers,
-    curators: curators
+    managers: managers.map(trimUserData),
+    curators: curators.map(trimUserData)
   });
 
   fs.writeFileSync("./data.json", data);
