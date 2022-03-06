@@ -26,6 +26,7 @@ jobs:
         run: |
           node ci/update.js
       - name: Add, Commit and Push
+        continue-on-error: true
         run: |
           git add data.json
           git commit -m "Update members list"
