@@ -21,11 +21,14 @@ function trimUserData(data) {
   managers = await managerReq.json();
   const curatorReq = await fetch("https://api.scratch.mit.edu/studios/31153550/curators");
   curators = await curatorReq.json();
-
+  
+  console.log(`${managers.length} managers, ${curators.length} curators`);
+  
   const data = JSON.stringify({
     managers: managers.map(trimUserData),
     curators: curators.map(trimUserData)
   });
 
   fs.writeFileSync("./data.json", data);
+  console.log("written");
 })();
