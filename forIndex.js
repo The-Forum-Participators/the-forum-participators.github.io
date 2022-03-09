@@ -1,3 +1,3 @@
 function hideButton() {
-  document.getElementById('privacyWarning').style.display = 'none'"
+  document.getElementById('privacyWarning').style.display = 'none';
 }
