@@ -8,39 +8,37 @@ function createMemberElement(data) {
 		span = document.createElement("span");
 	div.classList.add("member")
 	el.href = "https://scratch.mit.edu/users/" + data.username;
+	
 	img.src = data.profile.images["90x90"];
 	img.classList.add("avatar");
 	el.appendChild(img);
-
+	
 	el.appendChild(document.createElement("br"));
 
 	span.classList.add("name");
 	span.innerText = data.username;
 	el.appendChild(span);
-
 	div.appendChild(el);
 	return div;
 }
 
-fetch("/data.json")
-	.then((res) => res.json())
-	.then((data) => {
-		// Curators
+fetch("/members.json")
+	.then(res => res.json())
+	.then(data => {
 		let curators = data.curators;
-		for (let index of curators) {
-			curatorEl.appendChild(createMemberElement(index));
+		for (let i of curators) {
+			curatorEl.appendChild(createMemberElement(i));
 		}
 
-		// Managers
 		let managers = data.managers,
-			creator = managers[0];
-		managers.shift();
-		for (let index of managers) {
-			managerEl.appendChild(createMemberElement(index));
+			creator = managers.shift();
+		for (let i of managers) {
+			managerEl.appendChild(createMemberElement(i));
 		}
 
-		const creatorEl = createMemberElement(creator);
+		const creatorEl = createMemberElement(creator),
+			creatorElPlace = document.getElementById("creator");
 		creatorEl.classList.add("creator");
-		creatorEl.innerHTML = creatorEl.innerHTML + "<br>Creator";
-		document.getElementById("creator").appendChild(creatorEl);
+		creatorEl.innerHTML += "<br>Creator";
+		creatorElPlace.appendChild(creatorEl);
 	});
