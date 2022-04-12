@@ -11,7 +11,9 @@ function switchThemes() {
   const theme = document.getElementsByTagName("body").className;
   if (theme == "light") {
     document.getElementsByTagName("body").className = "dark";
+    document.getElementById("buttonthemeswitcher").innerHTML = "Light mode";
   } else if (theme == "dark") {
     document.getElementsByTagName("body").classname = "light";
+    document.getElementById("buttonthemeswitcher").innerHTML = "Dark mode";
   }
 }
