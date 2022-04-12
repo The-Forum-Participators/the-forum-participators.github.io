@@ -45,10 +45,8 @@ nav a:hover {
 }
 
 body.light {
-	margin: 0;
 	background-color: white;
         color: black;
-	text-align: center;
 }
 
 body.dark { 
@@ -56,6 +54,10 @@ body.dark {
         color: white;
 }
 
+body {
+	text-align: center;
+	margin: 0;
+}
 .bio {
 	width: 60%;
 	margin-left: auto;
