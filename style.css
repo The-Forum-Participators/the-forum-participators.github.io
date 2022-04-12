@@ -45,11 +45,16 @@ nav a:hover {
   background-color: #888800;
 }
 
-body {
+body.light {
   margin: 0;
   background-color: white;
   color: black;
   text-align: center;
+}
+
+body.dark {
+  background-color: #1a1919;
+  color: white;
 }
 
 .bio {
