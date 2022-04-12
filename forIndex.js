@@ -5,3 +5,13 @@ function hideButton() {
 function closeWindow() {
  window.close();
 }
+
+// This sets the theme
+function switchThemes() {
+  const theme = document.getElementsByTagName("body").className;
+  if (theme == "light") {
+    document.getElementsByTagName("body").className = "dark";
+  } else if (theme == "dark") {
+    document.getElementsByTagName("body").classname = "light";
+  }
+}
