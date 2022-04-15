@@ -3,6 +3,8 @@
 const fetch = require("cross-fetch");
 const fs = require("fs");
 
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 function trimUserData(data) {
   return {
     username: data.username,
@@ -27,6 +29,8 @@ async function loopMembers(initURL) {
     offset += 20;
     if(response.length < 20) {
       shouldEnd = true;
+    } else {
+      await sleep(2000);
     }
   }
   return data;
