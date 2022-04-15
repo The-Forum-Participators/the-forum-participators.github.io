@@ -14,14 +14,27 @@ function trimUserData(data) {
   };
 }
 
+async function loopMembers(initURL) {
+  let data = [];
+  let offset = 0;
+  let shouldEnd = false;
+  while(!shouldEnd) {
+    const fetchRequest = await fetch(initURL + "?offset=" + offset.toString());
+    const response = await fetchRequest.json();
+    for(let i of response) {
+      data.push(i);
+    }
+    offset += 20;
+    if(response.length < 20) {
+      shouldEnd = true;
+    }
+  }
+  return data;
+}
+
 (async() => {
-  let managers = [];
-  let curators = [];
-  const managerReq = await fetch("https://api.scratch.mit.edu/studios/31153550/managers");
-  managers = await managerReq.json();
-  const curatorReq = await fetch("https://api.scratch.mit.edu/studios/31153550/curators");
-  curators = await curatorReq.json();
-  
+  const managers = await loopMembers("https://api.scratch.mit.edu/studios/31153550/managers");
+  const curators = await loopMembers("https://api.scratch.mit.edu/studios/31153550/curators");
   console.log(`${managers.length} managers, ${curators.length} curators`);
   
   const data = JSON.stringify({
